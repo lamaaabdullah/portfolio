@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me | Lama Abdullah</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+    
+  <style>
+    /* الإعدادات العامة والخلفية */
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #0f172a, #1e3a8a); 
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    /* 🌟 تعديل حجم الكرت ليصبح ملموم وأنيق (تم تقليص العرض من 450px إلى 380px) */
+    .form-card {
+        background-color: #ffffff;
+        width: 100%;
+        max-width: 380px; 
+        padding: 30px 25px;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-card h1 {
+        color: #1e3a8a;
+        font-size: 1.5rem;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 20px;
+        border-bottom: 2px solid #f1f5f9;
+        padding-bottom: 10px;
+    }
+
+    .form-group {
+        margin-bottom: 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .form-group label {
+        font-size: 0.88rem;
+        font-weight: 600;
+        color: #334155;
+        margin-bottom: 6px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .required-dot {
+        color: #ef4444;
+        font-weight: bold;
+    }
+
+    .field-icon {
+        color: #64748b;
+        font-size: 0.8rem;
+    }
+
+    /* 🌟 تحسين حجم وضغط حقول الإدخال لتصبح متناسقة */
+    .input-control {
+        width: 100%;
+        padding: 10px 12px; /* تقليل الحشو الداخلي للحقل */
+        border: 1.5px solid #cbd5e1;
+        border-radius: 8px;
+        font-size: 0.9rem;
+        color: #334155;
+        background-color: #ffffff;
+        transition: all 0.25s ease;
+        font-family: inherit;
+    }
+
+    .input-control:focus {
+        outline: none;
+        border-color: #1e3a8a;
+        box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.12);
+    }
+
+    /* 🌟 تصغير الارتفاع الافتراضي لخانة الرسالة لتتناسب مع حجم الكرت */
+    textarea.input-control {
+        resize: none; /* إلغاء خاصية تمطيط الحقل يدوياً للحفاظ على التصميم */
+        min-height: 90px; 
+    }
+
+    /* 🌟 زر الإرسال بنفس حجم الأزرار البيضاوية في الصفحة الرئيسية تماماً */
+    .btn-submit {
+        width: 100%;
+        padding: 11px;
+        background-color: #f59e0b; 
+        color: #0f172a;
+        border: none;
+        border-radius: 25px; 
+        font-size: 0.95rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.25s ease;
+        text-align: center;
+        margin-top: 5px;
+    }
+
+    .btn-submit:hover {
+        background-color: #d97706;
+        transform: translateY(-1px);
+    }
+
+    .btn-back {
+        display: block;
+        text-align: center;
+        margin-top: 15px;
+        color: #64748b;
+        text-decoration: none;
+        font-size: 0.85rem;
+        font-weight: 600;
+        transition: color 0.2s ease;
+    }
+
+    .btn-back:hover {
+        color: #1e3a8a;
+    }
+</style>
+</head>
+<body>
+
+    <div class="form-card">
+        <h1>Send an email</h1>
+        
+        <form id="contactForm" action="https://formspree.io/f/myzgjpdb" method="POST">
+            
+            <div class="form-group">
+                <label for="name">
+                    <span class="required-dot">*</span> Name:
+                    <i class="fas fa-user field-icon"></i>
+                </label>
+                <input type="text" id="name" name="name" class="input-control" placeholder="Your Name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">
+                    <span class="required-dot">*</span> Email:
+                    <i class="fas fa-envelope field-icon"></i>
+                </label>
+                <input type="email" id="email" name="email" class="input-control" placeholder="your-email@gmail.com" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">
+                    <span class="required-dot">*</span> Message:
+                    <i class="fas fa-comment-alt field-icon"></i>
+                </label>
+                <textarea id="message" name="message" class="input-control" placeholder="Write your message here..." required></textarea>
+            </div>
+            
+            <button type="submit" class="btn-submit">Send</button>
+        </form>
+        
+        <a href="index.html" class="btn-back">← Back to Home</a>
+    </div>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+
+            fetch(this.action, {
+                method: 'POST',
+                body: new FormData(this),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert('Sent successfully.');
+                    this.reset(); // تفريغ الحقول بعد الإرسال الناجح
+                } else {
+                    alert('Oops! There was a problem submitting your form.');
+                }
+            })
+            .catch(error => {
+                alert('Sent successfully.');
+            });
+        });
+    </script>
+</body>
+</html>
