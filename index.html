@@ -8,14 +8,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
   <style>
-   
     * {
         box-sizing: border-box;
         margin: 0;
         padding: 0;
     }
 
-   
     html {
         scroll-behavior: smooth;
     }
@@ -32,7 +30,6 @@
         min-height: 100vh;
     }
 
-    
     .left {
         flex: 1;
         background: linear-gradient(135deg, #0f172a, #1e3a8a);
@@ -126,7 +123,6 @@
         transform: translateY(-2px);
     }
 
-    
     .right {
         flex: 2;
         margin-left: 35%;
@@ -306,16 +302,35 @@
         margin-right: 4px;
     }
 
+    .drive-icon-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background-color: #f0f4f9;
+        border-radius: 50%;
+        margin: 10px 0;
+        text-decoration: none;
+        color: #1f1f1f;
+        transition: transform 0.2s ease, background-color 0.2s ease;
+    }
+
+    .drive-icon-link:hover {
+        background-color: #e2e8f0;
+        transform: scale(1.08);
+    }
+
     @media (max-width: 900px) {
         .container {
             flex-direction: column; 
         }
         
-       
         .left {
             position: relative;
             width: 100%;
-            height: 100vh; 
+            height: auto; 
+            min-height: 100vh;
             padding: 40px 20px;
             border-right: none;
         }
@@ -324,54 +339,11 @@
             width: 110px;
             height: 110px;
         }
-
         
         .right {
             width: 100%;
             margin-left: 0;
             padding: 50px 24px;
-        }
-
-        .exp-header, .edu-header, .project-card-header {
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 5px;
-        }
-
-        .project-tag {
-            align-self: flex-start;
-        }
-    }
-    @media (max-width: 900px) {
-        .container {
-            flex-direction: column;
-        }
-        
-       
-        .left {
-            position: relative;
-            width: 100%;
-            height: 100vh; 
-            padding: 40px 20px;
-            border-right: none;
-        }
-
-        .profile-img {
-            width: 110px;
-            height: 110px;
-        }
-
-       
-        .right {
-            display: none; 
-            width: 100%;
-            margin-left: 0;
-            padding: 50px 24px;
-        }
-
-        
-        .right:has(:target), .section:target {
-            display: block !important;
         }
 
         .exp-header, .edu-header, .project-card-header {
@@ -399,9 +371,9 @@
       
       <div class="button-group">
         <a href="Email.html" class="button btn-email"><i class="fas fa-envelope"></i> Send Email</a>
-<a href="https://www.linkedin.com/in/lama-a-alzhrani-979ab7282" target="_blank" class="button btn-linkedin">
-    <i class="fab fa-linkedin"></i> LinkedIn Profile
-</a>
+        <a href="https://www.linkedin.com/in/lama-a-alzhrani-979ab7282" target="_blank" class="button btn-linkedin">
+            <i class="fab fa-linkedin"></i> LinkedIn Profile
+        </a>
         <a href="#skills" class="button btn-nav"><i class="fas fa-code"></i> Technical Skills</a>
         <a href="#experience" class="button btn-nav"><i class="fas fa-briefcase"></i> Work Experience</a>
         <a href="#projects" class="button btn-nav"><i class="fas fa-layer-group"></i> Projects</a>
@@ -411,35 +383,27 @@
     
     <div class="right">
       
-     <div id="summary" class="section">
+      <div id="summary" class="section">
         <h2>Professional Summary</h2>
         <p style="text-align: justify; line-height: 1.8; color: #475569; font-size: 1.05rem;">
           Detail-oriented IT graduate dedicated to bridging the gap between complex data and strategic decision-making. Specializing in Data Science and AI development, with proven skills in building intelligent models and utilizing Power BI and SQL to deliver actionable business insights. A proven collaborator with leadership experience in tech communities, ready to bring innovation and a strong professional presence to dynamic teams.
         </p>
       </div>
 
-   <h2>Technical Skills</h2>
+      <div id="skills" class="section">
+        <h2>Technical Skills</h2>
         <div class="skills-imgs" style="display: flex; gap: 24px; flex-wrap: wrap; align-items: center; margin-top: 20px; margin-bottom: 25px;">
-          
           <img src="HTML.png" alt="HTML" style="width: 55px; height: 55px; object-fit: contain; transition: transform 0.2s ease;" onmouseover="this.style.transform='scale(1.15)'" onmouseout="this.style.transform='scale(1)'" />
-          
           <img src="CSS.png" alt="CSS" style="width: 55px; height: 55px; object-fit: contain; transition: transform 0.2s ease;" onmouseover="this.style.transform='scale(1.15)'" onmouseout="this.style.transform='scale(1)'" />
-          
           <img src="javascript.png" alt="JavaScript" style="width: 55px; height: 55px; object-fit: contain; transition: transform 0.2s ease;" onmouseover="this.style.transform='scale(1.15)'" onmouseout="this.style.transform='scale(1)'" />
-          
           <img src="SQL.jpg" alt="SQL" style="width: 55px; height: 55px; object-fit: contain; transition: transform 0.2s ease;" onmouseover="this.style.transform='scale(1.15)'" onmouseout="this.style.transform='scale(1)'" />
-          
           <img src="JAVA.jpg" alt="JAVA" style="width: 55px; height: 55px; object-fit: contain; transition: transform 0.2s ease;" onmouseover="this.style.transform='scale(1.15)'" onmouseout="this.style.transform='scale(1)'" />
-
           <img src="c++.png" alt="C++" style="width: 55px; height: 55px; object-fit: contain; transition: transform 0.2s ease;" onmouseover="this.style.transform='scale(1.15)'" onmouseout="this.style.transform='scale(1)'" />
-          
           <img src="Python.png" alt="Python" style="width: 55px; height: 55px; object-fit: contain; transition: transform 0.2s ease;" onmouseover="this.style.transform='scale(1.15)'" onmouseout="this.style.transform='scale(1)'" />
-          
           <img src="powerbi.png" alt="Power BI" style="width: 55px; height: 55px; object-fit: contain; transition: transform 0.2s ease;" onmouseover="this.style.transform='scale(1.15)'" onmouseout="this.style.transform='scale(1)'" />
-          
         </div>
         
-  <h2 style="border: none; font-size: 1.2rem; margin-top: 25px; margin-bottom: 12px; color: #1e3a8a;">Soft Skills</h2>
+        <h2 style="border: none; font-size: 1.2rem; margin-top: 25px; margin-bottom: 12px; color: #1e3a8a;">Soft Skills</h2>
         <ul class="skills-list" style="padding-left: 5px;">
           <li style="margin-bottom: 10px; line-height: 1.6; text-align: justify;">
             <strong>Effective Communication & Teamwork:</strong> 
@@ -458,60 +422,61 @@
             <span style="color: #64748b;">Trusted to deliver high-quality technical tasks from concept to launch with minimal supervision.</span>
           </li>
         </ul>
+      </div>
 
+      <div id="experience" class="section">
+        <h2>Experience & Leadership</h2>
         
-        <div id="experience" class="section">
-  <h2>Experience & Leadership</h2>
-  
-  <div class="experience-item">
-    <div class="exp-header">
-      <span class="exp-title">Technical Workshop Instructor (Power BI)</span>
-      <span class="exp-date">Feb 14, 2026</span>
-    </div>
-    <div class="exp-company">Google Developer Student Clubs (GDSC) | Taif University</div>
-    <p class="exp-desc">
-      Organized and led a hands-on technical workshop focused on Data Visualization using Power BI. Instructed peers on data modeling and building interactive KPI dashboards.
-    </p>
-  </div>
+        <div class="experience-item">
+          <div class="exp-header">
+            <span class="exp-title">Technical Workshop Instructor (Power BI)</span>
+            <span class="exp-date">Feb 14, 2026</span>
+          </div>
+          <div class="exp-company">Google Developer Student Clubs (GDSC) | Taif University</div>
+          <p class="exp-desc">
+            Organized and led a hands-on technical workshop focused on Data Visualization using Power BI. Instructed peers on data modeling and building interactive KPI dashboards.
+          </p>
+        </div>
 
-  <div class="experience-item">
-    <div class="exp-header">
-      <span class="exp-title">Technical Workshop Instructor (Tech Basics)</span>
-      <span class="exp-date">Jan 22, 2025</span>
-    </div>
-    <div class="exp-company">Programming and Artificial Intelligence Club | Taif University</div>
-    <p class="exp-desc">
-      Prepared and delivered an interactive training workshop covering essential computing fundamentals and system structures to empower junior IT students.
-    </p>
-  </div>
+        <div class="experience-item">
+          <div class="exp-header">
+            <span class="exp-title">Technical Workshop Instructor (Tech Basics)</span>
+            <span class="exp-date">Jan 22, 2025</span>
+          </div>
+          <div class="exp-company">Programming and Artificial Intelligence Club | Taif University</div>
+          <p class="exp-desc">
+            Prepared and delivered an interactive training workshop covering essential computing fundamentals and system structures to empower junior IT students.
+          </p>
+        </div>
 
-  <div class="experience-item">
-    <div class="exp-header">
-      <span class="exp-title">Committee Member (Follow-up & Development)</span>
-      <span class="exp-date">2025 - 2026</span>
-    </div>
-    <div class="exp-company">Google Developer Student Clubs (GDSC) | Taif University</div>
-    <p class="exp-desc">
-      Contributed to managing technical event workflows and coordinating participant development plans within the university community.
-    </p>
-  </div>
-   <div class="experience-item">
-    <div class="exp-header">
-      <span class="exp-title">Member of the Programming and Artificial Intelligence Club</span>
-      <span class="exp-date">2025 - 2026</span>
-    </div>
-    <div class="exp-company">Programming and Artificial Intelligence Clubs | Taif University</div>
-    <p class="exp-desc">
-Contributed to managing technical event workflows and coordinating participant development plans within the university community.
-    </p>
-  </div>
+        <div class="experience-item">
+          <div class="exp-header">
+            <span class="exp-title">Committee Member (Follow-up & Development)</span>
+            <span class="exp-date">2025 - 2026</span>
+          </div>
+          <div class="exp-company">Google Developer Student Clubs (GDSC) | Taif University</div>
+          <p class="exp-desc">
+            Contributed to managing technical event workflows and coordinating participant development plans within the university community.
+          </p>
+        </div>
 
-</div>      
+        <div class="experience-item">
+          <div class="exp-header">
+            <span class="exp-title">Member of the Programming and Artificial Intelligence Club</span>
+            <span class="exp-date">2025 - 2026</span>
+          </div>
+          <div class="exp-company">Programming and Artificial Intelligence Clubs | Taif University</div>
+          <p class="exp-desc">
+            Contributed to managing technical event workflows and coordinating participant development plans within the university community.
+          </p>
+        </div>
+      </div>      
 
       <div id="projects" class="section">
         <h2>Projects</h2>
         <div class="projects-grid">
           
+          <!-- PayGuard Platform -->
           <div class="project-card">
             <div class="project-card-header">
               <span class="project-title"><i class="fas fa-shield-alt"></i> PayGuard Platform</span>
@@ -520,15 +485,18 @@ Contributed to managing technical event workflows and coordinating participant d
             <p class="project-desc">
               A web-based platform developed as a graduation project aimed at protecting online sellers from payment fraud. The system utilizes Artificial Intelligence (AI) and Machine Learning algorithms to analyze uploaded bank transfer receipts, extract text details, and accurately classify them as either <strong>Real</strong> or <strong>Fake</strong> to ensure transaction security.
             </p>
-          <span class="tech-label">Tech Stack:</span>
+            <div class="project-tech-stack">
+              <span class="tech-label">Tech Stack:</span>
               <span class="tech-badge">Python</span>
               <span class="tech-badge">Machine Learning</span>
               <span class="tech-badge">PHP</span>
               <span class="tech-badge">MySQL Database</span>
               <span class="tech-badge">HTML5</span>
               <span class="tech-badge">CSS3</span>
+            </div>
           </div>
 
+          <!-- Cafe Sales Analytics Dashboard -->
           <div class="project-card">
             <div class="project-card-header">
               <span class="project-title"><i class="fas fa-chart-bar"></i> Cafe Sales Analytics Dashboard</span>
@@ -537,9 +505,9 @@ Contributed to managing technical event workflows and coordinating participant d
             <p class="project-desc">
               An interactive Business Intelligence dashboard created and presented during a technical data visualization workshop. The project transforms raw transactional data into actionable insights, tracking key performance indicators (KPIs) such as total orders, quantity, and overall sales. It features advanced time-series analysis for sales trends, category performance metrics (Drinks, Bakery, Desserts), and automated interactive filters to drive business efficiency.
             </p>
-         <a href="https://drive.google.com/drive/folders/1PzF-QxwyFzW_zaSJcdSVqQsEYxKL55uY?usp=sharing" target="_blank" class="drive-icon-link" style="display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; background-color: #f0f4f9; border-radius: 50%; margin: 10px 0; text-decoration: none; color: #1f1f1f; transition: 0.3s;">
-    <i class="fab fa-google-drive" style="font-size: 1.3rem; color: #25a162;"></i>
-</a>
+            <a href="https://drive.google.com/drive/folders/1PzF-QxwyFzW_zaSJcdSVqQsEYxKL55uY?usp=sharing" target="_blank" class="drive-icon-link" title="View on Google Drive">
+              <i class="fab fa-google-drive" style="font-size: 1.3rem; color: #25a162;"></i>
+            </a>
             <div class="project-tech-stack">
               <span class="tech-label">Tech Stack:</span>
               <span class="tech-badge">Power BI</span>
@@ -549,10 +517,32 @@ Contributed to managing technical event workflows and coordinating participant d
               <span class="tech-badge">Technical Instruction</span>
             </div>
           </div>
- 
 
+          <!-- Saharant Shop Project -->
+          <div class="project-card">
+            <div class="project-card-header">
+              <span class="project-title"><i class="fas fa-shopping-bag"></i> Saharant Shop</span>
+              <span class="project-tag">E-Commerce & Web Development</span>
+            </div>
+            <p class="project-desc">
+              A comprehensive e-commerce web platform designed to provide a seamless shopping experience. It includes essential e-commerce functionalities such as dynamic product catalogs, category filtering, cart management, and a responsive user-friendly interface.
+            </p>
+            <a href="https://drive.google.com/drive/folders/1l1glxzSEIzw_u5F_jC3tzoiwrGs3QOWl?usp=drive_link" target="_blank" class="drive-icon-link" title="View on Google Drive">
+              <i class="fab fa-google-drive" style="font-size: 1.3rem; color: #25a162;"></i>
+            </a>
+            <div class="project-tech-stack">
+              <span class="tech-label">Tech Stack:</span>
+              <span class="tech-badge">Web Development</span>
+              <span class="tech-badge">E-Commerce</span>
+              <span class="tech-badge">UI/UX</span>
+              <span class="tech-badge">Database Design</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
         
-     <div id="education" class="section">
+      <div id="education" class="section">
         <h2>Education</h2>
         <div class="education-item">
           <div class="edu-header">
